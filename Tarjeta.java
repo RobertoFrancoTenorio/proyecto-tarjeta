@@ -5,9 +5,15 @@ public class Tarjeta
     {
         saldo = 0;
     } 
-    public void depositar(float dinero)
+    public float depositar(float dinero)
     {
-        saldo=saldo+dinero;
+        if(dinero>0)
+        {
+            saldo=saldo+dinero;
+            return(saldo);
+        }
+        else
+            return(0);
     } 
     public float retirar(float dinero)
     {
@@ -21,7 +27,6 @@ public class Tarjeta
     }
     public void consultar()
     {
-        System.out.println("El saldo es: ");
         System.out.println(saldo);
     } 
 } 
